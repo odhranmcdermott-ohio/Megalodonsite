@@ -1,13 +1,17 @@
+/* GLOBAL STYLES */
 body {
-    background-color: #010b14; /* Deep Sea Midnight Blue */
+    background-color: #010b14; /* Deep Ocean Blue */
     color: #e0f2f1;
-    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     line-height: 1.6;
+    text-align: center;
 }
 
+/* HERO SECTION - The "Hook" */
 .hero {
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(1,11,20,1)), url('IMG_2212.jpg');
+    /* Using the cinematic shark image as the background */
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(1,11,20,1)), url('IMG_2233.JPG');
     background-size: cover;
     background-position: center;
     height: 60vh;
@@ -15,55 +19,103 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
 }
 
-.hero h1 { font-size: 5rem; letter-spacing: 10px; margin: 0; color: #00d4ff; }
+.hero h1 {
+    font-size: 5rem;
+    letter-spacing: 12px;
+    margin: 0;
+    color: #00d4ff;
+    text-shadow: 3px 3px 10px #000;
+}
 
-.container { max-width: 1000px; margin: auto; padding: 20px; }
+/* CONTAINER */
+.container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+}
 
+/* FOSSIL GRID */
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
+    margin-top: 30px;
 }
 
 .card {
     background: #021a2b;
-    padding: 10px;
-    border-radius: 8px;
-    text-align: center;
+    padding: 15px;
+    border-radius: 12px;
     border: 1px solid #00d4ff;
+    transition: transform 0.3s;
 }
 
-.card img { width: 100%; border-radius: 5px; transition: 0.3s; }
-.card img:hover { transform: scale(1.05); filter: brightness(1.2); }
+.card:hover {
+    transform: translateY(-10px);
+}
 
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* SIZE COMPARISON IMAGES */
 .comparison-flex img {
     width: 30%;
+    min-width: 200px;
     margin: 10px;
-    border: 2px solid white;
+    border: 2px solid #00d4ff;
+    border-radius: 5px;
 }
 
+/* THE INTERACTIVE LAB (Assignment Style) */
 .meg-lab {
     background: #052c42;
     padding: 40px;
-    border-radius: 15px;
-    margin-top: 50px;
+    border-radius: 20px;
+    margin: 50px 0;
+    border: 2px dashed #00d4ff;
 }
 
+.lab-item {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #1a4a66;
+}
+
+/* BUTTONS & INPUTS */
 button {
     background: #00d4ff;
+    color: #010b14;
     border: none;
-    padding: 12px 24px;
+    padding: 15px 30px;
     font-weight: bold;
+    font-size: 1rem;
     cursor: pointer;
-    border-radius: 4px;
-    transition: 0.2s;
+    border-radius: 50px;
+    transition: 0.3s;
 }
 
-button:hover { background: #00a3c4; transform: translateY(-2px); }
+button:hover {
+    background: #fff;
+    transform: scale(1.05);
+}
 
-input { padding: 10px; border-radius: 4px; border: none; width: 150px; }
+input {
+    padding: 12px;
+    border-radius: 5px;
+    border: none;
+    width: 100px;
+    text-align: center;
+    font-size: 1rem;
+}
 
-.lab-item { margin-bottom: 30px; border-bottom: 1px solid #1a4a66; padding-bottom: 20px; }
+footer {
+    padding: 40px;
+    font-size: 0.8rem;
+    color: #557c93;
+}
