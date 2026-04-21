@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Megalodon | Fossils</title>
+  <title>Megalodon | Size</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
-    <h1>Megalodon Fossils</h1>
-    <p>Evidence Left Behind</p>
+    <h1>Megalodon Size</h1>
+    <p>How Big Was It?</p>
 
     <nav>
       <a href="index.html">Home</a>
@@ -21,40 +21,27 @@
 
   <main>
     <section class="card">
-      <h2>What Fossils Do We Find?</h2>
+      <h2>Estimated Length</h2>
       <p>
-        Most Megalodon fossils are teeth because shark skeletons are mostly cartilage,
-        which does not fossilize as easily as bone.
+        Megalodon is often estimated at around 50 to 60 feet long, making it one of the largest predatory sharks ever. 
       </p>
     </section>
 
     <section class="card">
-      <h2>Why Teeth Matter</h2>
-      <p>
-        Megalodon teeth can grow over 7 inches long. Their size helps scientists estimate
-        body length and feeding habits.
-      </p>
+      <h2>How Does It Compare?</h2>
       <ul>
-        <li>Large triangular shape</li>
-        <li>Serrated edges for cutting prey</li>
-        <li>Found in many parts of the world</li>
+        <li>Much bigger than a modern great white shark</li>
+        <li>Large enough to hunt marine mammals</li>
+        <li>One of the top predators of its time</li>
       </ul>
     </section>
 
     <section class="card">
-      <h2>Image Notes</h2>
-      <p>
-        You can place your fossil tooth images on this page to make the site feel more organized.
-      </p>
-      <img src="IMG_2224.jpeg" alt="Megalodon fossil tooth" class="page-image" />
-    </section>
-
-    <section class="card">
-      <h2>Fun Feature</h2>
-      <button onclick="toggleFact('fossilFact')">Show/Hide Fossil Fact</button>
-      <p id="fossilFact" class="hidden">
-        Scientists often identify Megalodon by its giant fossil teeth because cartilage rarely survives.
-      </p>
+      <h2>Guess the Length</h2>
+      <p>Enter your guess for Megalodon length in feet:</p>
+      <input type="number" id="lengthGuess" placeholder="Enter a number" />
+      <button onclick="checkLength()">Check Guess</button>
+      <p id="guessResult"></p>
     </section>
   </main>
 
