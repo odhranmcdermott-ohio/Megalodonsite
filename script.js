@@ -1,50 +1,43 @@
-// 1. Button + Alert
-document.getElementById("diveBtn").addEventListener("click", () => {
-  alert("Warning: Oxygen levels stable. Entering Megalodon territory...");
-});
-
-// 2. Change text + color
-const depthText = document.getElementById("waterPressure");
-
-document.getElementById("descendBtn").addEventListener("click", () => {
-  depthText.textContent = "Current Depth: Midnight Zone (1000m)";
-  depthText.style.color = "#00d4ff";
-  depthText.style.fontWeight = "bold";
-});
-
-// 3. User input + logic
-const guessBtn = document.getElementById("checkGuess");
-const feedback = document.getElementById("logicFeedback");
-
-guessBtn.addEventListener("click", () => {
-  const guess = Number(document.getElementById("whaleGuess").value);
-
-  if (guess === 2) {
-    feedback.textContent = "Spot on! They needed roughly 2,500 lbs of food daily.";
-    feedback.style.color = "#7dffae";
-  } else if (guess > 2) {
-    feedback.textContent = "Too high! They were huge, but not that hungry.";
-    feedback.style.color = "#ff8b8b";
-  } else if (guess < 2 && guess > 0) {
-    feedback.textContent = "Close, but a bit more than that. Try guessing 2.";
-    feedback.style.color = "#ffd966";
-  } else {
-    feedback.textContent = "Enter a valid number first.";
-    feedback.style.color = "#ffd966";
-  }
-});
-
-// 4. Random fact generator
 const facts = [
-  "Megalodon had over 250 teeth in its mouth at once.",
-  "Their bite force may have exceeded 40,000 pounds per square inch.",
-  "Young Megalodons likely lived in coastal nursery areas.",
-  "They lived roughly 23 to 3.6 million years ago.",
-  "No, they are not still alive in the Mariana Trench.",
-  "Megalodon was one of the largest predatory sharks in Earth’s history."
+  "Megalodon had teeth over 7 inches long.",
+  "Megalodon was one of the largest predatory sharks ever.",
+  "Its name means 'big tooth.'",
+  "Scientists learn about Megalodon mostly through fossil teeth.",
+  "Megalodon likely hunted large marine animals."
 ];
 
-document.getElementById("oracleBtn").addEventListener("click", () => {
-  const randomFact = facts[Math.floor(Math.random() * facts.length)];
-  document.getElementById("oracleOutput").textContent = "🦈 " + randomFact;
-});
+const factButton = document.getElementById("factButton");
+const factOutput = document.getElementById("factOutput");
+
+if (factButton) {
+  factButton.addEventListener("click", function () {
+    const randomIndex = Math.floor(Math.random() * facts.length);
+    factOutput.textContent = facts[randomIndex];
+  });
+}
+
+function toggleFact(id) {
+  const element = document.getElementById(id);
+  if (element.classList.contains("hidden")) {
+    element.classList.remove("hidden");
+  } else {
+    element.classList.add("hidden");
+  }
+}
+
+function checkLength() {
+  const guess = Number(document.getElementById("lengthGuess").value);
+  const result = document.getElementById("guessResult");
+
+  if (!guess) {
+    result.textContent = "Enter a number first.";
+  } else if (guess >= 50 && guess <= 60) {
+    result.textContent = "Nice! That is in the common estimate range.";
+  } else {
+    result.textContent = "Good guess — many estimates place Megalodon around 50–60 feet.";
+  }
+}
+
+function showAlert() {
+  alert("Nice choice — climate change is one major extinction theory!");
+}
