@@ -3,88 +3,53 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Megalodon | King of the Ancient Oceans</title>
+  <title>Megalodon | Home</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <header>
+    <h1>Megalodon</h1>
+    <p>The King of the Ancient Oceans</p>
 
-  <section class="hero">
-    <div class="hero-overlay">
-      <h1>MEGALODON</h1>
-      <p>The Apex Predator of the Cenozoic Era</p>
-    </div>
-  </section>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="fossils.html">Fossils</a>
+      <a href="size.html">Size</a>
+      <a href="extinction.html">Extinction</a>
+    </nav>
+  </header>
 
-  <div class="container">
-    <section class="gallery">
-      <h2>The Fossil Record</h2>
-      <div class="grid">
-        <div class="card">
-          <img src="IMG_2224.jpeg" alt="Megalodon fossil tooth" />
-          <p> the shark </p>
-        </div>
-
-        <div class="card">
-          <img src="IMG_2226.webp" alt="Megalodon fossil comparison" />
-          <p> jaw reconstruction </p>
-        </div>
-
-        <div class="card">
-          <img src="IMG_2227.webp" alt="Reconstructed Megalodon jaw" />
-          <p> 7 inch tooth</p>
-        </div>
-
-        <div class="card">
-          <img src="IMG_2228.png" alt="Museum display of Megalodon remains" />
-          <p>Museum Display</p>
-        </div>
-      </div>
+  <main>
+    <section class="hero">
+      <h2>Welcome to the World of Megalodon</h2>
+      <p>
+        Megalodon was one of the biggest and most powerful predators to ever live.
+        This site explores its fossils, size, and extinction.
+      </p>
+      <button id="factButton">Show Random Meg Fact</button>
+      <p id="factOutput"></p>
     </section>
 
-    <section class="size-comparison">
-      <h2>Size & Scale</h2>
-      <div class="comparison-flex">
-        <img src="IMG_2229.png" alt="Megalodon size chart" />
-        <img src="IMG_2230.webp" alt="Megalodon evolutionary chart" />
-        <img src="IMG_2231.webp" alt="Predator comparison chart" />
-      </div>
-      <p class="section-text">
-        At roughly 50–60 feet long, the Megalodon dominated prehistoric seas and remains one of the largest predatory sharks ever discovered.
+    <section class="card">
+      <h2>Quick Overview</h2>
+      <p>
+        Megalodon lived millions of years ago and ruled ancient oceans as an apex predator.
+        Scientists study its giant teeth and fossil evidence to learn how it lived.
       </p>
     </section>
 
-    <hr />
-
-    <section class="meg-lab">
-      <h2>Interactive Discovery Lab</h2>
-
-      <div class="lab-item">
-        <button id="diveBtn">Start Deep Sea Dive</button>
-      </div>
-
-      <div class="lab-item">
-        <p id="waterPressure">Current Depth: Surface (0m)</p>
-        <button id="descendBtn">Descend 1000m</button>
-      </div>
-
-      <div class="lab-item">
-        <h3>Prey Calculator</h3>
-        <p>How many whales did a Megalodon eat a day? Take a guess:</p>
-        <input type="number" id="whaleGuess" placeholder="Enter number..." />
-        <button id="checkGuess">Verify Data</button>
-        <p id="logicFeedback"></p>
-      </div>
-
-      <div class="lab-item">
-        <h3>Shark Oracle</h3>
-        <button id="oracleBtn">Generate Random Meg-Fact</button>
-        <p id="oracleOutput"></p>
-      </div>
+    <section class="card">
+      <h2>Explore the Site</h2>
+      <ul>
+        <li><strong>Fossils:</strong> Teeth, jaws, and discoveries</li>
+        <li><strong>Size:</strong> Length, bite force, and prey</li>
+        <li><strong>Extinction:</strong> Why Megalodon disappeared</li>
+      </ul>
     </section>
-  </div>
+  </main>
 
   <footer>
-    <p>&copy; 2026 Prehistoric Research Project</p>
+    <p>© 2026 Megalodon Project</p>
   </footer>
 
   <script src="script.js"></script>
