@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Megalodon | King of the Ancient Oceans</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <section class="hero">
+        <h1>MEGALODON</h1>
+        <p>The Apex Predator of the Cenozoic Era</p>
+    </section>
+
+    <div class="container">
+        <section class="gallery">
+            <h2>The Fossil Record</h2>
+            <div class="grid">
+                <div class="card">
+                    <img src="IMG_2208.jpg" alt="Tooth size comparison">
+                    <p>Massive Teeth vs. Human Hand</p>
+                </div>
+                <div class="card">
+                    <img src="IMG_2209.jpg" alt="Jaw reconstruction">
+                    <p>Reconstructed Jaw Sets</p>
+                </div>
+                <div class="card">
+                    <img src="IMG_2211.jpg" alt="Fossilized jaw">
+                    <p>Complete Fossilized Remains</p>
+                </div>
+                <div class="card">
+                    <img src="IMG_2214.jpg" alt="Tooth measurements">
+                    <p>7-Inch Serrated Teeth</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="size-comparison">
+            <h2>Size & Scale</h2>
+            <div class="comparison-flex">
+                <img src="IMG_2210.jpg" alt="Scale chart">
+                <img src="IMG_2213.jpg" alt="Meg vs Great White">
+                <img src="IMG_2215.jpg" alt="Evolutionary chart">
+            </div>
+            <p>At 50-60 feet long, the Megalodon made the Great White look like a goldfish.</p>
+        </section>
+
+        <hr>
+
+        <section class="meg-lab">
+            <h2>🦈 Interactive Discovery Lab</h2>
+
+            <div class="lab-item">
+                <button id="diveBtn">Start Deep Sea Dive</button>
+            </div>
+
+            <div class="lab-item">
+                <p id="waterPressure">Current Depth: Surface (0m)</p>
+                <button id="descendBtn">Descend 1000m</button>
+            </div>
+
+            <div class="lab-item">
+                <h3>Prey Calculator</h3>
+                <p>How many whales did a Megalodon eat a day? (Take a guess):</p>
+                <input type="number" id="whaleGuess" placeholder="Enter number...">
+                <button id="checkGuess">Verify Data</button>
+                <p id="logicFeedback"></p>
+            </div>
+
+            <div class="lab-item">
+                <h3>Shark Oracle</h3>
+                <button id="oracleBtn">Generate Random Meg-Fact</button>
+                <p id="oracleOutput"></p>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Prehistoric Research Project</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
